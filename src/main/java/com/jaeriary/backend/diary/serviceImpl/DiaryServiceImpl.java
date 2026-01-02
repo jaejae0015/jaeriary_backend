@@ -50,4 +50,10 @@ public class DiaryServiceImpl implements DiaryService {
     public void delete(Long id) {
         diaryRepository.deleteById(id);
     }
+    @Override
+    public Diary findById(Long id) {
+        return diaryRepository.findById(id)
+            .orElseThrow(() -> new IllegalArgumentException("Diary not found"));
+    }
+    
 }

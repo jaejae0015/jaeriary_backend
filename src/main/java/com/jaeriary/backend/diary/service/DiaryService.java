@@ -14,4 +14,6 @@ public interface DiaryService {
     Diary update(Long id, DiaryUpdateRequest request);
 
     void delete(Long id);
+    
+    Diary findById(Long id);
 }
